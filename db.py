@@ -9,6 +9,8 @@ db_local_host = os.environ.get('DB_LOCAL_HOST')
 db_connection_name = os.environ.get('CLOUD_SQL_CONNECTION_NAME')
 
 def open_connection():
+    print('DATABASE:');
+    print(db_local_host);
     try:
         if db_connection_name:
             unix_socket = '/cloudsql/{}'.format(db_connection_name)
